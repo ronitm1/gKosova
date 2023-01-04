@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class AdminController extends Controller
 {
@@ -24,4 +25,42 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin');
-    }}
+    }
+
+
+     public function profileblade()
+    {
+        return view('admin.partials.profile');
+    }
+
+
+    public function tablesblade()
+    {
+        return view('admin.partials.tables');
+    }
+ 
+
+    public function notificationsblade()
+    {
+        return view('admin.partials.notifications');
+    }
+
+    public function reservationsblade()
+    {
+        return view('admin.partials.reservations');
+    }
+
+
+    public function addemployeeblade()
+    {
+        return view('admin.partials.addemployee');
+    }
+}
+
+
+
+
+    
+
+
+

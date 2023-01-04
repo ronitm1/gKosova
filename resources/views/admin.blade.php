@@ -61,7 +61,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/tables.html">
+          <a class="nav-link text-white " href="{{route('tablesblade')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -69,7 +69,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/billing.html">
+          <a class="nav-link text-white " href="{{route('reservationsblade')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
@@ -82,7 +82,7 @@
 
         
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/notifications.html">
+          <a class="nav-link text-white " href="{{route('notificationsblade')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">notifications</i>
             </div>
@@ -91,7 +91,7 @@
 
 
           <li class="nav-item">
-            <a class="nav-link text-white " href="../pages/billing.html">
+            <a class="nav-link text-white " href="{{route('addemployeeblade')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">receipt_long</i>
               </div>
@@ -107,7 +107,7 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/profile.html">
+          <a class="nav-link text-white " href="{{route('profileblade')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">person</i>
             </div>
