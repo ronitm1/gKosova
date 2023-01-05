@@ -1,34 +1,6 @@
 
 
-<!--
-=========================================================
-* Material Dashboard 2 - v3.0.4
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <title>
-   Login
-  </title>
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-  
-  <!-- Font Awesome Icons -->
   
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -68,26 +40,43 @@
                   </div>
                 </div>
               </div>
+
+              @csrf
               <div class="card-body">
                 <form role="form" class="text-start">
+                  
                   <div class="input-group input-group-outline my-3">
-                    <label class="form-label">Email</label>
+                    <label class="form-label">{{__('Email')}}</label>
                     <input type="email" class="form-control">
-                  </div>
+                  
+
+                    @error('email')
+                          <p class="text-red-500 text-xs mt-1">{{$message}}</p>                      
+                          @enderror                   
+                   </div>
+
+                  
                   <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">Password</label>
+                    <label class="form-label">{{__('Password')}}</label >
                     <input type="password" class="form-control">
+                    
+                    @error('password')
+                      <p class="text-red-500 text-xs mt-1">{{$message}}</p>               
+                      @enderror                       
                   </div>
+
+
                   <div class="form-check form-switch d-flex align-items-center mb-3">
                     <input class="form-check-input" type="checkbox" id="rememberMe" checked>
-                    <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
+                    <label class="form-check-label mb-0 ms-3" for="rememberMe"> {{__('Remember Me')}}</label>
                   </div>
                   <div class="text-center">
-                    <button type="button" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>
+                    <button type="button"  class="btn bg-gradient-primary w-100 my-4 mb-2" >{{__('Login')}}</button>
+                    
                   </div>
                   <p class="mt-4 text-sm text-center">
                     Don't have an account?
-                    <a href="{{route('register')}}" class="text-primary text-gradient font-weight-bold">Sign up</a>
+                    <a href="/register" class="text-primary text-gradient font-weight-bold">Sign up</a>
                   </p>
                 </form>
               </div>
@@ -130,3 +119,4 @@
 </body>
 
 </html>
+
