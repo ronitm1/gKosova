@@ -1,6 +1,6 @@
 
-
-
+@extends('layouts.admin')
+@section('content')
   
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -41,13 +41,15 @@
                 </div>
               </div>
 
-              @csrf
+            
               <div class="card-body">
-                <form role="form" class="text-start">
+                <form role="form" class="text-start" method="POST" action="{{route('login')}}">
                   
+
+                  @csrf
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label">{{__('Email')}}</label>
-                    <input type="email" class="form-control">
+                    <input type="email" class="form-control" name="email" id="email">
                   
 
                     @error('email')
@@ -58,7 +60,7 @@
                   
                   <div class="input-group input-group-outline mb-3">
                     <label class="form-label">{{__('Password')}}</label >
-                    <input type="password" class="form-control">
+                    <input id="password" type="password" class="form-control" name="password"> 
                     
                     @error('password')
                       <p class="text-red-500 text-xs mt-1">{{$message}}</p>               
@@ -71,8 +73,15 @@
                     <label class="form-check-label mb-0 ms-3" for="rememberMe"> {{__('Remember Me')}}</label>
                   </div>
                   <div class="text-center">
-                    <button type="button"  class="btn bg-gradient-primary w-100 my-4 mb-2" >{{__('Login')}}</button>
-                    
+                    <button type="submit"  class="btn bg-gradient-primary w-100 my-4 mb-2" >{{__('Login') }} </button>
+
+                    @if(Route::has('password.request'))
+                        <a class="btn btn-link" href="{{route('password.request') }}" >
+                        {{__('Forgot Your Password')}}
+                        </a>
+                  @endif   
+
+
                   </div>
                   <p class="mt-4 text-sm text-center">
                     Don't have an account?
@@ -120,3 +129,4 @@
 
 </html>
 
+@endsection
