@@ -88,7 +88,7 @@
 
                     <div class="input-group input-group-outline mb-3">
                          <label class="form-label">{{__('password_confirmation')}}</label>
-                         <input for="password_confirmation" id="password_confirmation" name="confirm_password" type="password" class="form-control" required>
+                         <input for="password_confirmation" id="password_confirmation" name="password_confirmation" type="password" class="form-control" required>
                     </div>
 
 
