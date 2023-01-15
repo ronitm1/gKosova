@@ -20,9 +20,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Auth::routes();
 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/admindashboard', [AdminController::class, 'index'])->name('admindashboard');
 
 Route::get('/profile' , [AdminController::class, 'profileblade'])->name('profileblade');
 Route::get('/tables' , [AdminController::class, 'tablesblade'])->name('tablesblade');
